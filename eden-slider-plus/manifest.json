@@ -3,7 +3,7 @@
 
   "name": "Eden Slider Plus",
   "description": "This extension is designed for improving the functions of Eden's slider.",
-  "version": "0.2.1",
+  "version": "0.2.2",
 
   "browser_action": {
     "default_icon": "/images/favicon.png",
