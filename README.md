@@ -77,6 +77,10 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 
 ## 5 安全性声明
 
-该插件只对[Eden](http://eden.sysu.edu.cn/)起作用。不会读取浏览器其他标签页的敏感信息。使用者可以直接查看源码，或者查看拓展程序中的权限声明。
+该插件只对[Eden](http://eden.sysu.edu.cn/)起作用。并且不会读取[Eden](http://eden.sysu.edu.cn/)以及浏览器其他标签页的敏感信息。使用者可以直接查看源码，或者查看拓展程序中的权限声明。
 
 ![](http://ww1.sinaimg.cn/large/ed796d65jw1f1q36zz2yvj20tm0m7n1p.jpg)
+
+## 6 licence
+
+This project is under MIT License (MIT)
