@@ -1,11 +1,12 @@
 # eden-slider-plus
 
-> 中山大学SDCS学院软件工程专业Eden教学系统功能优化解决方案
+> 中山大学SDCS学院，软件工程专业，Eden教学系统，功能优化解决方案。
 
 > 作者：吴家荣
 
 ## 0 简介
 
+由于[Eden](http://eden.sysu.edu.cn/)上的Slider无法
 
 ## 1 下载并安装
 

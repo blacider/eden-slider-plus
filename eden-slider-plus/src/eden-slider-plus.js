@@ -85,7 +85,7 @@ EdenSliderPlus.prototype.activate = function() {
         EdenSliderPlus.prototype.exitFullscreen();
       }
 		}
-		else if (event.keyCode == 27) { // 按esc键退出全屏，Mac OS失效
+		else if (event.keyCode == 27) { // 按esc键退出全屏，Mac OS的chrome(48.0.2564.97 64-bit))中失效
       EdenSliderPlus.isFullScreen = false;
 			EdenSliderPlus.slider.width(EdenSliderPlus.width);
       EdenSliderPlus.prototype.exitFullscreen();
