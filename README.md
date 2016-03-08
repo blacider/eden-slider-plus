@@ -33,7 +33,13 @@
 
 > 在这种背景下，提出间接引入插件的折衷方案
 
-1. 下载源码压缩包：[eden-slider-plus.zip]()
+1. 下载源码压缩包：[eden-slider-plus.zip](https://github.com/wujr5/eden-slider-plus/raw/master/eden-slider-plus.zip)
+2. 解压到您电脑上的任意位置
+3. 使用chrome浏览器打开：chrome://extensions
+4. 勾选开发者模式，点击加载已解压了的拓展程序
+> ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2nhcn6ij20w903vaak.jpg)
+5. 把解压好的文件夹作为根目录，点击确定，即可安装成功
+> 
 
 ## 1 Eden优化
 
