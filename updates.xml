@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='phpofckkinicmggdjghpkocjepmefnhl'>
-    <updatecheck codebase='https://github.com/wujr5/eden-slider-plus/raw/master/eden-slider-plus.crx' version='0.1.0' />
+    <updatecheck codebase='https://github.com/wujr5/eden-slider-plus/raw/master/eden-slider-plus.crx' version='0.1.1' />
   </app>
 </gupdate>
