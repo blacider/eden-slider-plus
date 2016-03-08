@@ -46,9 +46,13 @@
 	![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2r3vqrhj20g90nkgo7.jpg)
 	![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2rq1a72j20vy07omyq.jpg)
 
-### 1.3 360安全浏览器
+### 1.3 其他浏览器
 
-暂未可用。
+一般情况下，凡是chrome内核或者包含chrome内核的浏览器都能仿照以上两种方式安装插件。
+
+如：360安全浏览器，qq浏览器等。
+
+但是建议直接使用chrome浏览器。因为chrome浏览器是最简洁，最好用，最适合开发者的浏览器。
 
 ## 2 Eden呈现与功能优化
 
