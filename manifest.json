@@ -22,5 +22,5 @@
       "js": ["jquery-1.12.1.min.js", "eden-slider-plus.js"]
     }
   ],
-  "update_url": "http://myhost.com/mytestextension/updates.xml"
+  "update_url": "https://github.com/wujr5/eden-slider-plus/raw/master/updates.xml"
 }
