@@ -7,3 +7,9 @@
 ## 0 简介
 
 文档地址：https://developer.chrome.com/extensions/getstarted
+
+## 1 Eden优化
+
+展示优化
+
+1. 进度条突出
