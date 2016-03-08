@@ -24,6 +24,10 @@
 2. 使用chrome浏览器打开：chrome://extensions
 3. 把下载好的压缩包拖拽到空白位置
 
+安装效果：
+
+![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2w0w4c3j217y08ejsi.jpg)
+
 ### 1.2 chrome浏览器：间接引入插件
 
 > 如果chrome浏览器升级到最高版本的时候，对安全性的要求变高了。直接导致的后果就是，安装后的外源插件无法启用。
@@ -42,10 +46,31 @@
 > ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2r3vqrhj20g90nkgo7.jpg)
 > ![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2rq1a72j20vy07omyq.jpg)
 
-## 1 Eden优化
+### 1.3 360安全浏览器
 
-展示优化
 
-1. 进度条突出
- 
 
+## 2 Eden呈现与功能优化
+
+### 2.1 呈现优化
+
+1. 横向滑动条突出显示。已优化。
+
+### 2.2 功能优化
+
+1. 双击全屏或退出
+2. Enter键全屏或退出
+3. 左方向键减少页数
+4. 右方向键增加页数
+
+## 3 Bug Report
+
+> 欢迎大家在issues上提各种意见。也欢迎大家参与插件的开发。
+
+Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
+
+## 4 更新记录
+
+> 版本命名规范参考：[语义化版本 2.0.0](http://semver.org/lang/zh-CN/)
+
+1. 2016/03/09，v0.2.1 版本发布
