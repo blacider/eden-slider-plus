@@ -1,4 +1,4 @@
-# eden-slider-plus
+# Eden Slider Plus
 
 > 中山大学SDCS学院，软件工程专业，Eden教学系统，功能优化解决方案。
 
@@ -81,6 +81,6 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 
 ![](http://ww1.sinaimg.cn/large/ed796d65jw1f1q36zz2yvj20tm0m7n1p.jpg)
 
-## 6 licence
+## 6 License
 
 This project is under MIT License (MIT)
