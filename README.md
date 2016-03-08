@@ -12,9 +12,9 @@
 
 **Eden Slider Plus**
 
-![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2sf4kowj209709ugme.jpg)
-
 插件的作用是优化Eden的呈现方式，并且改善Eden Slider的使用体验。功能如截图所示。
+
+![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2sf4kowj209709ugme.jpg)
 
 ## 1 下载并安装
 
@@ -74,3 +74,9 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 > 版本命名规范参考：[语义化版本 2.0.0](http://semver.org/lang/zh-CN/)
 
 1. 2016/03/09，v0.2.1 版本发布
+
+## 5 安全性声明
+
+该插件只对[Eden](http://eden.sysu.edu.cn/)起作用。不会读取浏览器其他标签页的敏感信息。使用者可以直接查看源码，或者查看拓展程序中的权限声明。
+
+![](http://ww1.sinaimg.cn/large/ed796d65jw1f1q36zz2yvj20tm0m7n1p.jpg)
