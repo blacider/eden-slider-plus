@@ -12,7 +12,7 @@
 
 **Eden Slider Plus**
 
-![](http://ww1.sinaimg.cn/large/ed796d65jw1f1q2b8cuinj208v08j74u.jpg)
+![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2sf4kowj209709ugme.jpg)
 
 插件的作用是优化Eden的呈现方式，并且改善Eden Slider的使用体验。功能如截图所示。
 
@@ -29,7 +29,7 @@
 > 如果chrome浏览器升级到最高版本的时候，对安全性的要求变高了。直接导致的后果就是，安装后的外源插件无法启用。
 
 > 如图所示：
-> ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2hyvfyuj20wc06pmy8.jpg)
+> ![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2tbvkbzj20wc06v75r.jpg)
 
 > 在这种背景下，提出间接引入插件的折衷方案
 
