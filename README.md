@@ -8,7 +8,7 @@
 
 由于[Eden](http://eden.sysu.edu.cn/)上的Slider无法全屏显示，而且不能使用快捷键进行控制。再者，[Eden](http://eden.sysu.edu.cn/)本身有诸多在呈现上的不恰当之处。
 
-鉴于以上原因，我设计并开发了这个简单的插件。
+因此，我设计并开发了这个简单的插件，以优化显示和提供辅助功能。
 
 **Eden Slider Plus**
 
@@ -41,10 +41,10 @@
 2. 解压到您电脑上的任意位置
 3. 使用chrome浏览器打开：chrome://extensions
 4. 勾选开发者模式，点击加载已解压了的拓展程序
-> ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2nhcn6ij20w903vaak.jpg)
+	![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q39c1gbwj20vy04vjs9.jpg)
 5. 把解压好的文件夹作为根目录，点击确定，即可安装成功
-> ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2r3vqrhj20g90nkgo7.jpg)
-> ![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2rq1a72j20vy07omyq.jpg)
+	![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2r3vqrhj20g90nkgo7.jpg)
+	![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2rq1a72j20vy07omyq.jpg)
 
 ### 1.3 360安全浏览器
 
