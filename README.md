@@ -39,7 +39,8 @@
 4. 勾选开发者模式，点击加载已解压了的拓展程序
 > ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2nhcn6ij20w903vaak.jpg)
 5. 把解压好的文件夹作为根目录，点击确定，即可安装成功
-> 
+> ![](http://ww4.sinaimg.cn/large/ed796d65jw1f1q2r3vqrhj20g90nkgo7.jpg)
+> ![](http://ww3.sinaimg.cn/large/ed796d65jw1f1q2rq1a72j20vy07omyq.jpg)
 
 ## 1 Eden优化
 
