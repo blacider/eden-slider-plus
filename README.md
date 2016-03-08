@@ -6,6 +6,8 @@
 
 ## 0 简介
 
+下载安装：[eden-slider-plus](https://github.com/wujr5/eden-slider-plus/raw/master/eden-slider-plus.crx)
+
 文档地址：https://developer.chrome.com/extensions/getstarted
 
 ## 1 Eden优化
