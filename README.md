@@ -77,11 +77,23 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 
 > 版本命名规范参考：[语义化版本 2.0.0](http://semver.org/lang/zh-CN/)
 
+### 4.1 记录
+
 1. 2016/03/09，v0.2.1 版本发布
 2. 2016/03/09，v0.2.2 bug fix
 3. 2016/03/09，v0.2.3 bug fix
 4. 2016/03/09，v0.2.4 添加fullscreenchange事件，修复按esc键退出后，slider宽高度不变的bug
 5. 2016/03/09，v0.2.5 bug fix
+
+### 4.2 注意事项
+
+进行版本更新的时候，为了能够使得已经安装的插件，在使用1.1的方式进行安装的时候，能够进行自动更新，需要按照规则进行一定的设置和操作。
+
+1. 按照规范改变`updates.xml`中的版本号。
+2. 同样地改变`manifest.json`中的`version`字段。
+3. 在chrome://extensions中对更新的插件程序打包。
+4. 在资源管理器中，对文件夹`eden-slider-plus`压缩成.zip格式文件，放在根目录。
+5. 进行git操作，把更push到github
 
 ## 5 安全性声明
 
