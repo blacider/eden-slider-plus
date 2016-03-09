@@ -3,7 +3,7 @@
 
   "name": "Eden Slider Plus",
   "description": "This extension is designed for improving the functions of Eden's slider.",
-  "version": "0.2.5",
+  "version": "0.3.0",
 
   "browser_action": {
     "default_icon": "/images/favicon.png",
@@ -22,5 +22,6 @@
       "js": ["/module/jquery-1.12.1.min.js", "/src/eden-slider-plus.js"]
     }
   ],
-  "update_url": "https://github.com/wujr5/eden-slider-plus/raw/master/updates.xml"
+  "update_url": "https://github.com/wujr5/eden-slider-plus/raw/master/updates.xml",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }

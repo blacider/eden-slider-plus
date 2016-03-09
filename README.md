@@ -84,6 +84,7 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 3. 2016/03/09，v0.2.3 bug fix
 4. 2016/03/09，v0.2.4 添加fullscreenchange事件，修复按esc键退出后，slider宽高度不变的bug
 5. 2016/03/09，v0.2.5 bug fix
+6. 2016/03/09，v0.3.0 添加Google Analytics
 
 ### 4.2 注意事项
 
