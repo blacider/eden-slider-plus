@@ -6,6 +6,8 @@
 
 # 更新通知
 
+使用平台：Mac OS, Chrome 可用; Win 10, Chrome 可用; Unbuntu, Chrome 暂不可用。
+
 最新版：2016/03/10，v0.4.0，添加notification
 
 如需手动更新，请转到 **“1 下载并安装”**
