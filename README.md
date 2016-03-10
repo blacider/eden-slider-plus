@@ -4,6 +4,10 @@
 
 > 作者：吴家荣
 
+# 更新通知
+
+最新版：2016/03/10，v0.4.0
+
 ## 0 简介
 
 由于[Eden](http://eden.sysu.edu.cn/)上的Slider无法全屏显示，而且不能使用快捷键进行控制。再者，[Eden](http://eden.sysu.edu.cn/)本身有诸多在呈现上的不恰当之处。
@@ -85,6 +89,7 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 4. 2016/03/09，v0.2.4 添加fullscreenchange事件，修复按esc键退出后，slider宽高度不变的bug
 5. 2016/03/09，v0.2.5 bug fix
 6. 2016/03/09，v0.3.0 添加Google Analytics
+7. 2016/03/10，v0.4.0 添加chrome desktop notification
 
 ### 4.2 注意事项
 

@@ -58,6 +58,8 @@ EdenSliderPlus.prototype.exitFullscreen = function () {
 
 // 启动嵌入的js代码
 EdenSliderPlus.prototype.activate = function() {
+  if (!EdenSliderPlus.slider) throw Error("No elements' id name is slider");
+
   setDblClickEvent();
   setKeydownEvent();
   setFullscreenChangeEvent();
