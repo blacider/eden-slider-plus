@@ -1,3 +1,10 @@
 #footer {
 	width: auto !important;
 }
+
+.download-btn {
+  position: absolute;
+  right: 380px;
+  top: 135px;
+  font-size: 18px;
+}

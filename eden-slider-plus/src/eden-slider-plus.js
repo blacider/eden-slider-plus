@@ -60,9 +60,51 @@ EdenSliderPlus.prototype.exitFullscreen = function () {
 EdenSliderPlus.prototype.activate = function() {
   if (!EdenSliderPlus.slider) throw Error("No elements' id name is slider");
 
+  setDownloadButton();
   setDblClickEvent();
   setKeydownEvent();
   setFullscreenChangeEvent();
+}
+
+function setDownloadButton() {
+  var btn = document.createElement('button');
+  btn.className = 'download-btn';
+  btn.textContent = 'DOWNLOAD PDF';
+  $('#header').prepend(btn);
+  btn.onclick = downloadPdf;
+}
+
+function downloadPdf() {
+  var doc = new jsPDF();
+  var URLs = getImageURLs();
+  getImageFromUrl(URLs[0], createPDF);
+}
+
+function getImageURLs() {
+  var images = $('#slider-pager li a img');
+  var URLs = [];
+  var length = images.length;
+  for (var i = 0; i < length; i++) 
+    URLs.push(images[i].attributes[0].value);
+  return URLs;
+}
+
+var getImageFromUrl = function(url, callback) {
+  var img = new Image();
+
+  img.onError = function() {
+    alert('Cannot load image: "'+url+'"');
+  };
+  img.onload = function() {
+    callback(img);
+  };
+  img.src = url;
+}
+
+var createPDF = function(imgData) {
+  var doc = new jsPDF();
+  doc.addImage(imgData, 'jpg', 10, 40, 2000, 1500);
+  doc.save('a.pdf');
 }
 
 function setDblClickEvent() {

@@ -20,7 +20,7 @@
     {
       "matches": ["http://eden.sysu.edu.cn/*"],
       "css": ["/src/eden-slider-plus.css"],
-      "js": ["/module/jquery-1.12.1.min.js", "/src/eden-slider-plus.js"]
+      "js": ["/module/jquery-1.12.1.min.js", "/src/eden-slider-plus.js", "module/jspdf.min.js"]
     }
   ],
   "update_url": "https://github.com/wujr5/eden-slider-plus/raw/master/updates.xml",
