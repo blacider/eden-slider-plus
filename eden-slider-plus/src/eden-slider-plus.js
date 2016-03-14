@@ -14,7 +14,7 @@ var EdenSliderPlus = function () {}
 EdenSliderPlus.prototype.init = function() {
   var slider = $('#slider'); // 取得幻灯片元素
 
-  if (slider == null) throw Error("No elements' id name is slider");
+  if (slider.length == 0) throw Error("No elements' id name is slider");
   
   var width = slider.innerWidth(); // 幻灯片元素宽
   var height = slider.innerHeight(); // 幻灯片元素高
@@ -58,7 +58,7 @@ EdenSliderPlus.prototype.exitFullscreen = function () {
 
 // 启动嵌入的js代码
 EdenSliderPlus.prototype.activate = function() {
-  if (!EdenSliderPlus.slider) throw Error("No elements' id name is slider");
+  if (!EdenSliderPlus.slider.length == 0) throw Error("No elements' id name is slider");
 
   setDownloadButton();
   setDblClickEvent();
