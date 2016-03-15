@@ -8,3 +8,21 @@
   top: 135px;
   font-size: 18px;
 }
+
+.django-ace-toolbar-plus {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  width: 100% !important;
+  padding-right: 15px;
+}
+
+.django-ace-witget-plus {
+  margin-top: 27px;
+}
+
+.field-container fieldset {
+  padding-left: 5px;
+  padding-right: 5px;
+}
