@@ -106,6 +106,7 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 5. 2016/03/09，v0.2.5 bug fix
 6. 2016/03/09，v0.3.0 添加Google Analytics
 7. 2016/03/10，v0.4.0 添加chrome desktop notification
+8. 2016/03/15，v0.5.0 修复代码编辑区全屏后无法缩小bug，添加下载pdf功能
 
 ### 4.2 注意事项
 
