@@ -26,8 +26,6 @@ EdenSliderPlus.prototype.init = function() {
     screenHeight * (width / height); // 适应高度而计算出来的全屏后的宽度
   EdenSliderPlus.slider = slider;
   EdenSliderPlus.isFullScreen = false;
-
-  // console.log(width, height, screenWidth, screenWidth, EdenSliderPlus.fullScreenWidth);
 }
 
 // 设置全屏的函数
