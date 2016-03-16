@@ -15,7 +15,7 @@ EdenSliderPlus.prototype.init = function() {
   var slider = $('#slider'); // 取得幻灯片元素
 
   var width = slider.innerWidth(); // 幻灯片元素宽
-  var height = slider.innerHeight(); // 幻灯片元素高
+  var height = slider.innerHeight();  // 幻灯片元素高
   var screenWidth = window.screen.width; // 电脑屏幕宽
   var screenHeight = window.screen.height; // 电脑屏幕高
 
@@ -74,55 +74,111 @@ function fixDjangoAceBug() {
 
 // 添加下载按钮
 function setDownloadButton() {
+  var li = document.createElement('li');
   var btn = document.createElement('button');
-  var div = document.createElement('div');
+  var mask = document.createElement('div');
   var prompt = document.createElement('div');
 
   btn.className = 'download-btn';
   btn.textContent = 'DOWNLOAD PDF';
-  div.className = 'esp-mask';
-  prompt.className = 'esp-prompt';
+  li.appendChild(btn);
+  li.className = 'download-btn-li'
+  mask.className = 'esp-mask';
+  prompt.className = 'esp-prompt sr-only';
 
-  div.appendChild(prompt);
+  prompt.appendChild(createProgerss());
+  mask.appendChild(prompt);
+  $('#header').prepend(mask);
+  $('#nav ul').prepend(li);
 
-  $('#header').prepend(btn);
-  $('#header').prepend(div);
+  // 一页pdf构建完毕事件
+  EdenSliderPlus.addedPages = 0;
+  EdenSliderPlus.slider[0].addEventListener('add-page-load', function() {
+    console.log('page: ' + EdenSliderPlus.addedPages);
+    var images = $('#slider li img');
+    if (EdenSliderPlus.addedPages == images.length) {
+      EdenSliderPlus.doc.save(document.title + '.pdf');
+      $('.esp-mask').removeClass('esp-mask-open');
+      $('.esp-prompt').addClass('sr-only');
+    } else {
+      setProgress(parseInt((++EdenSliderPlus.addedPages) / images.length * 100) + '%');
+      setTimeout((function(index) {
+        return function() {
+          addPage(index);
+        }
+      })(EdenSliderPlus.addedPages - 1), 0);
+    }
+  })
+  EdenSliderPlus.onePageLoadEvent = document.createEvent("HTMLEvents");
+  EdenSliderPlus.onePageLoadEvent.initEvent("add-page-load", false, false);
 
   btn.onclick = downloadPdf;
 }
 
+// 创建进度条
+function createProgerss() {
+  var progress = document.createElement('div');
+  progress.className = 'progress';
+
+  var progressBar = document.createElement('div');
+  progressBar.className = 'progress-bar progress-bar-striped active';
+  progressBar.setAttribute('role', 'progressbar');
+  progressBar.setAttribute('aria-valuemin', '0');
+  progressBar.setAttribute('aria-valuemax', '100');
+  progress.appendChild(progressBar);
+
+  return progress;
+}
+
 // 下载按钮点击事件
 function downloadPdf() {
-  $('.esp-mask').addClass('esp-mask-open'); // 开启mask
-
-  EdenSliderPlus.doc = new jsPDF('l', 'mm', 'a4');
-  setPDFAttributes();
-
   var images = $('#slider li img');
 
-  setTimeout(function() {
-    for (var i = 0; i < images.length; i++) {
-    // for (var i = 0; i < 2; i++) {
-      var canvas = document.createElement('CANVAS');
-      var ctx = canvas.getContext('2d');
-
-      var imgData;
-
-      canvas.height = images[i].naturalHeight;
-      canvas.width = images[i].naturalWidth;
-
-      ctx.drawImage(images[i], 0, 0);
-      imgData = canvas.toDataURL('image/jpeg');
-
-      EdenSliderPlus.doc.addPage();
-      EdenSliderPlus.doc.addImage(imgData, 'jpg', 12, 2, images[i].naturalWidth / 7.3, images[i].naturalHeight / 7.3);
-    }
-    
+  if (EdenSliderPlus.addedPages == images.length) {
     EdenSliderPlus.doc.save(document.title + '.pdf');
-    setTimeout(function() {
-      $('.esp-mask').removeClass('esp-mask-open');
-    }, 1000);
-  }, 500);
+    return;
+  }
+
+  $('.esp-mask').addClass('esp-mask-open'); // 开启mask
+  $('.esp-prompt').removeClass('sr-only');
+  EdenSliderPlus.doc = new jsPDF('l', 'mm', 'a4');
+  setPDFAttributes();
+  
+  setProgress(parseInt((++EdenSliderPlus.addedPages) / images.length * 100) + '%');
+  setTimeout((function(index) {
+    return function() {
+      addPage(index);
+    }
+  })(EdenSliderPlus.addedPages - 1), 0);
+}
+
+// 增加一页
+function addPage(i) {
+  var images = $('#slider li img');
+  var canvas = document.createElement('CANVAS');
+  var ctx = canvas.getContext('2d');
+
+  var imgData;
+
+  canvas.height = images[i].naturalHeight;
+  canvas.width = images[i].naturalWidth;
+
+  ctx.drawImage(images[i], 0, 0);
+  imgData = canvas.toDataURL('image/jpeg');
+
+  EdenSliderPlus.doc.addPage();
+  var height = 210;
+  var width = height * (images[i].naturalWidth / images[i].naturalHeight);
+  var paddingLeft = parseInt((297 - width) / 2);
+  EdenSliderPlus.doc.addImage(imgData, 'jpg', paddingLeft, 0, width, 210);
+
+  EdenSliderPlus.slider[0].dispatchEvent(EdenSliderPlus.onePageLoadEvent);
+}
+
+// 设置进度
+function setProgress(percent) {
+  $('.progress .progress-bar').width(percent);
+  $('.progress .progress-bar').text(percent);
 }
 
 // 设置pdf相关属性
@@ -131,7 +187,7 @@ function setPDFAttributes() {
     title: document.title,
     subject: 'PDF from Eden Slider Plus',
     author: '吴家荣',
-    keywords: 'Eden, SYSU, SDCS, 中山大学',
+    keywords: 'Eden, SYSU, SDCS',
     creator: 'jsPDF'
   });
 
@@ -154,6 +210,7 @@ function setPDFAttributes() {
   EdenSliderPlus.doc.text(20, 150, 'Be free to contact: jiarongwu.se@foxmail.com');
 }
 
+// 设置双击事件
 function setDblClickEvent() {
   EdenSliderPlus.slider[0].ondblclick = function() { // 双击鼠标进入和退出全屏
     if (EdenSliderPlus.isFullScreen == false) {
@@ -168,6 +225,7 @@ function setDblClickEvent() {
   }
 }
 
+// 设置键盘事件
 function setKeydownEvent() {
   var prev = $('.callbacks_nav.callbacks1_nav.prev')[0];
   var next = $('.callbacks_nav.callbacks1_nav.next')[0];
@@ -198,6 +256,7 @@ function setKeydownEvent() {
   }
 }
 
+// 设置全屏与否响应事件
 function setFullscreenChangeEvent() {
   document.addEventListener("fullscreenchange", function () {
     if (document.isFullScreen == false) {
@@ -229,4 +288,4 @@ ESP = new EdenSliderPlus();
 setTimeout(function() {
   ESP.init();
   ESP.activate();
-}, 2000);
+}, 100);

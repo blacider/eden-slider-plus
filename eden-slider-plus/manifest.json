@@ -3,7 +3,7 @@
 
   "name": "Eden Slider Plus",
   "description": "This extension is designed for improving the functions of Eden's slider.",
-  "version": "0.5.1",
+  "version": "0.6.0",
 
   "browser_action": {
     "default_icon": "/images/favicon.png",
@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "matches": ["http://eden.sysu.edu.cn/*"],
-      "css": ["/src/eden-slider-plus.css"],
+      "css": ["/src/eden-slider-plus.css", "/module/bootstrap-progress-bar.css"],
       "js": ["/module/jquery-1.12.1.min.js", "/src/eden-slider-plus.js", "module/jspdf.min.js"]
     }
   ],

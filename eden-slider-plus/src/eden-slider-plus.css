@@ -4,10 +4,11 @@
 }
 
 .download-btn {
-  position: absolute;
-  right: 380px;
-  top: 135px;
   font-size: 18px;
+}
+
+.download-btn-li {
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .django-ace-toolbar-plus {
@@ -29,27 +30,30 @@
 }
 
 .esp-mask-open {
-  /*display: block;*/
-  z-index: 100000;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
   transition: all 1s;
 }
 
 .esp-mask {
-  /*display: none;*/
+  z-index: -100000;
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0);
   transition: all 1s;
 }
 
-/*.esp-prompt {
-  background-color: red;
-  display: block;
-  width: 300px;
+.esp-prompt {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+#header {
   height: 50px;
-  margin-left: 50%;
-  margin-top: 50%;
-}*/
+  padding: 0px !important;
+}
