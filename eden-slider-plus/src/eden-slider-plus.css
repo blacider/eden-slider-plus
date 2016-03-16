@@ -57,3 +57,7 @@
   height: 50px;
   padding: 0px !important;
 }
+
+#desc {
+  clear: both;
+}

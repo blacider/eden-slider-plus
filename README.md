@@ -14,13 +14,21 @@ Eden是一个十分优秀的教学系统，能为Eden开发插件并提供给大
 4. 右方向键增加页数
 5. 下载PDF
 
+# 待拓展功能或优化
+
+1. “Latest Submission Grade”区域使用Ajax更新，无需手动刷新网页
+2. “Latest Submission Grade”区域添加队列信息（前面还有多少人未批改）
+3. 全屏后幻灯片放大功能
+4. 鼠标滚动翻页
+5. 鼠标单击翻页
+
 # 更新通知
 
 使用平台：Mac OS, Chrome 可用; Win XP/7/810, Chrome 可用; Unbuntu, Chrome 暂不可用。
 
 目前可用的浏览器是Chrome，qq浏览器。360浏览器暂不可用，原因不详。如有需求，可开发360安全浏览器插件。
 
-最新版：2016/03/17，v0.6.1 bug fix
+最新版：2016/03/17，v0.6.2 bug fix
 
 通过1.1方式安装的，可以自动更新。其他方式安装的，则需要手动更新。
 
@@ -112,6 +120,7 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 9. 2016/03/16，v0.5.1 修复下载时无响应bug
 10. 2016/03/17，v0.6.0 下载时增加进度条，修复pdf宽高度不适配bug
 11. 2016/03/17，v0.6.1 bug fix
+12. 2016/03/17，v0.6.2 bug fix
 
 ### 4.2 注意事项
 
