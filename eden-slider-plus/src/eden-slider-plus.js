@@ -76,10 +76,14 @@ function fixDjangoAceBug() {
 function setDownloadButton() {
   var btn = document.createElement('button');
   var div = document.createElement('div');
+  var prompt = document.createElement('div');
 
   btn.className = 'download-btn';
   btn.textContent = 'DOWNLOAD PDF';
   div.className = 'esp-mask';
+  prompt.className = 'esp-prompt';
+
+  div.appendChild(prompt);
 
   $('#header').prepend(btn);
   $('#header').prepend(div);
@@ -89,28 +93,36 @@ function setDownloadButton() {
 
 // 下载按钮点击事件
 function downloadPdf() {
+  $('.esp-mask').addClass('esp-mask-open'); // 开启mask
+
   EdenSliderPlus.doc = new jsPDF('l', 'mm', 'a4');
   setPDFAttributes();
 
   var images = $('#slider li img');
 
-  for (var i = 0; i < images.length; i++) {
-    var canvas = document.createElement('CANVAS');
-    var ctx = canvas.getContext('2d');
+  setTimeout(function() {
+    for (var i = 0; i < images.length; i++) {
+    // for (var i = 0; i < 2; i++) {
+      var canvas = document.createElement('CANVAS');
+      var ctx = canvas.getContext('2d');
 
-    var imgData;
+      var imgData;
 
-    canvas.height = images[i].naturalHeight;
-    canvas.width = images[i].naturalWidth;
+      canvas.height = images[i].naturalHeight;
+      canvas.width = images[i].naturalWidth;
 
-    ctx.drawImage(images[i], 0, 0);
-    imgData = canvas.toDataURL('image/jpeg');
+      ctx.drawImage(images[i], 0, 0);
+      imgData = canvas.toDataURL('image/jpeg');
 
-    EdenSliderPlus.doc.addPage();
-    EdenSliderPlus.doc.addImage(imgData, 'jpg', 12, 2, images[i].naturalWidth / 7.3, images[i].naturalHeight / 7.3);
-  }
-  
-  EdenSliderPlus.doc.save(document.title + '.pdf')
+      EdenSliderPlus.doc.addPage();
+      EdenSliderPlus.doc.addImage(imgData, 'jpg', 12, 2, images[i].naturalWidth / 7.3, images[i].naturalHeight / 7.3);
+    }
+    
+    EdenSliderPlus.doc.save(document.title + '.pdf');
+    setTimeout(function() {
+      $('.esp-mask').removeClass('esp-mask-open');
+    }, 1000);
+  }, 500);
 }
 
 // 设置pdf相关属性
