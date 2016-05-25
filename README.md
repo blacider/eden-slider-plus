@@ -121,6 +121,7 @@ Bug Report: [issues](https://github.com/wujr5/eden-slider-plus/issues)
 10. 2016/03/17，v0.6.0 下载时增加进度条，修复pdf宽高度不适配bug
 11. 2016/03/17，v0.6.1 bug fix
 12. 2016/03/17，v0.6.2 bug fix
+13. 2016/05/25，v0.6.3 Match zion.syus.edu.cn 
 
 ### 4.2 注意事项
 

@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://eden.sysu.edu.cn/*"],
+      "matches": ["http://eden.sysu.edu.cn/*", "http://zion.sysu.edu.cn/*"],
       "css": ["/src/eden-slider-plus.css", "/module/bootstrap-progress-bar.css"],
       "js": ["/module/jquery-1.12.1.min.js", "/src/eden-slider-plus.js", "module/jspdf.min.js"]
     }
